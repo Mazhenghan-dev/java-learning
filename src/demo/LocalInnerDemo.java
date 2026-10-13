@@ -1,3 +1,5 @@
+package demo;
+
 public class LocalInnerDemo {
     private String outerField="外部类实例变量";
     void method(){

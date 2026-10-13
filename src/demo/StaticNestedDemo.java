@@ -1,3 +1,5 @@
+package demo;
+
 public class StaticNestedDemo {
     private static String outerStaticField = "外部类的【静态】变量";
     private static String outerInstanceField = "外部类的【实例】变量";

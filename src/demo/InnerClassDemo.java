@@ -1,3 +1,5 @@
+package demo;
+
 public class InnerClassDemo {
     private String outerField = "外部类实例变量";
     private static String outerStatic = "外部类静态变量";

@@ -1,3 +1,5 @@
+package demo;
+
 import java.io.IOException;
 
 public class ExceptionDemo {
