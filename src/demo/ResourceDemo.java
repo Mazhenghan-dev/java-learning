@@ -1,6 +1,5 @@
 package demo;
 
-import com.sun.security.jgss.GSSUtil;
 
 public class ResourceDemo {
     static class MyResource implements AutoCloseable{
