@@ -1,9 +1,6 @@
 package practice;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -51,11 +48,24 @@ public class FileCopyDemo {
         }
         System.out.println(" "+dst2+" 大小:"+ new File(dst2).length() +"字节");
 
+        // ===== 6. 用 BufferedInputStream（自带缓冲）=====
+        System.out.println("===== 6. BufferedInputStream 复制 =====");
+        String dst3 = "copy_dst3.txt";
+        try (BufferedInputStream bin = new BufferedInputStream(new FileInputStream(SRC));BufferedOutputStream bout = new BufferedOutputStream(new FileOutputStream(dst3))){
+            int b;
+            while((b = bin.read()) != -1){
+                bout.write(b);
+            }
+        }
+        System.out.println(" "+dst3+"大小:"+new File(dst3).length()+"字节");
+
         // ===== 5. 清理临时文件 =====
         System.out.println("===== 5. 清理 =====");
         Files.deleteIfExists(Paths.get(SRC));
         Files.deleteIfExists(Paths.get(DST));
         Files.deleteIfExists(Paths.get(dst2));
         System.out.println("已删除3个临时文件");
+        Files.deleteIfExists(Paths.get(dst3));
+        System.out.println("已删除4个临时文件");
     }
 }
