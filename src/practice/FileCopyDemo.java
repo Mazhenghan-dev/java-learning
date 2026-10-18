@@ -64,7 +64,6 @@ public class FileCopyDemo {
         Files.deleteIfExists(Paths.get(SRC));
         Files.deleteIfExists(Paths.get(DST));
         Files.deleteIfExists(Paths.get(dst2));
-        System.out.println("已删除3个临时文件");
         Files.deleteIfExists(Paths.get(dst3));
         System.out.println("已删除4个临时文件");
     }
