@@ -81,13 +81,29 @@ class MechanicalFactory implements MonsterFactory{
     }
 }
 public class Task2 {
-    static int KillCount = 0;
+    static int killCount = 0;
 
     public static void main(String[] args) {
-        MonsterFactory undeadFactory =new UndeadFactory();
+        MonsterFactory undeadFactory = new UndeadFactory();
         undeadFactory.createMonster().attack();
         undeadFactory.createWeapon().fire();
-        KillCount++;
+        killCount++;
+        System.out.println("怪物登场，准备战斗。\n");
+
+        MonsterFactory elementalFactory = new ElementalFactory();
+        elementalFactory.createMonster().attack();
+        elementalFactory.createWeapon().fire();
+        killCount++;
+        System.out.println("怪物登场，准备战斗。\n");
+
+        MonsterFactory mechanicalFactory = new MechanicalFactory();
+        mechanicalFactory.createMonster().attack();
+        mechanicalFactory.createWeapon().fire();
+        killCount++;
+        System.out.println("怪物登场，准备战斗。\n");
+
+        System.out.println("--- 游戏平衡性分析数据 ---");
+        System.out.println("当前累计怪物击杀数量: " + killCount);
     }
 }
 
