@@ -36,7 +36,7 @@ public class ListDemo {
         System.out.println("===== 5. 三种遍历 =====");
         System.out.println("普通for：");
         for(int i = 0;i < list.size();i++){
-            System.out.println(list.get(i)+" ");
+            System.out.print(list.get(i)+" ");
         }
         System.out.println(" ");
         System.out.print("增强 for: ");
