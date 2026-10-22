@@ -39,6 +39,6 @@ public class ListCompare {
             linkedList.get(linkedList.size()/2);
         }
         long t8 = System.currentTimeMillis();
-        System.out.println("ArrayList："+(t8-t7)+"ms");
+        System.out.println("LinkedList："+(t8-t7)+"ms");
     }
 }
