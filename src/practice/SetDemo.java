@@ -28,14 +28,14 @@ public class SetDemo {
         // ===== 3. 删 =====
         System.out.println("===== 3. 删 =====");
         set.remove("Python");
-        System.out.println("删除 Python 后: [Java, C++]:"+set);
+        System.out.println("删除 Python 后:"+set);
 
         // ===== 4. 没有下标，不能 get() =====
         System.out.println("===== 4. 没有下标，不能 get() =====");
         System.out.println("  （想取出元素只能用遍历）");
         System.out.print("  遍历得到: ");
         for (String i : set){
-            System.out.println(i);
+            System.out.print(i);
         }
         System.out.println();
 
